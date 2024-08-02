@@ -1,28 +1,12 @@
-import pandas as pd
+import pandas as pd     #alternative module = openpyxl
 
 # Sample data
-data = {'Column1': [1, 2, 3],
-        'Column2': ['a', 'b', 'c']}
+data = {'Name': ["Rohan","Mohan","Sohan"],
+        'Course': ['Python', 'JAVA', 'C++'],
+        'Age': [18,21,19]}
 
 # Create a DataFrame
 df = pd.DataFrame(data)
 
 # Write DataFrame to an Excel file
-df.to_excel('output.xlsx', index=False)
-
-# ----------------------------------------------------------------------------------------------------------
-
-# import openpyxl
-# wb = openpyxl.Workbook()
-# sheet = wb.active
-
-# data = [
-#     ["Name", "Age", "Course"],
-#     ["Rohan", 18, "Programmimng"],
-#     ["Mohan", 20, "Data Analytics"],
-#     ["Sohan", 16, "Multimedia"]
-# ]
-
-# for row in data:
-#     sheet.append(row)
-# wb.save("example.xlsx")
+df.to_excel('example.xlsx', index=False)
